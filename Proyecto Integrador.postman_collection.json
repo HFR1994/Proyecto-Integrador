@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "a59f7a9d-7a39-4458-8b6f-8b0c8a60f864",
+		"name": "Proyecto Integrador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Buscar Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/client/FORH941027ER3",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"client",
+								"FORH941027ER3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estatus de las compañias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/client/FORH941027ER3/companies",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"client",
+								"FORH941027ER3",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprovar Compañia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"client\": \"FORH941027ER3\",\n\t\"company\": \"AXA\",\n\t\"aprove\": true\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/client/aprove/company",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"client",
+								"aprove",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"FORH94017ER3\",\n\t\"user\":{\n\t\t\"nombres\": \"Héctor Carlos\",\n\t\t\"apellidoPaterno\": \"Flores\",\n\t\t\"apellidoMaterno\": \"Reynoso\",\n\t\t\"rfc\": \"FORH941027ER3\",\n\t\t\"curp\": \"FORH941027HDFLYC01\",\n\t\t\"password\": \"12345\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/client/register",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"client",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"FORH94017ER3\",\n\t\"password\": \"1245\"\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/login",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Estatus de los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/AXA/clients",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"AXA",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Datos de Compañia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"client\":\"FORH941027ER3\",\n\t\"company\": \"AXA\",\n\t\"data\": {\n\t\t\"valor1\": true,\n\t\t\"valor2\": 2,\n\t\t\"valor3\": \"String\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/register/data",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"register",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Acceso para agregar datos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"client\":\"FORH941027ER3\",\n\t\"company\": \"AXA\"\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/request/access",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"request",
+								"access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar un cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/AXA/client/FORH941027ER3",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"AXA",
+								"client",
+								"FORH941027ER3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"Puripas\",\n\t\"company\": {\n\t\t\"user\": \"Puriplas\",\n\t\t\"password\": \"12345\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/register",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"Puriplas\",\n\t\"password\": \"1245\"\n}"
+						},
+						"url": {
+							"raw": "http://el-equipo-perro.mybluemix.net/company/login",
+							"protocol": "http",
+							"host": [
+								"el-equipo-perro",
+								"mybluemix",
+								"net"
+							],
+							"path": [
+								"company",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
