@@ -1,0 +1,5 @@
+---
+applications:
+- name: el-equipo-perro
+  random-route: false
+  memory: 512M

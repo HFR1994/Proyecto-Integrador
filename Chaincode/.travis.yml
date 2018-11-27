@@ -1,0 +1,10 @@
+{
+  "language": "node_js",
+  "node_js": "6",
+  "dist": "trusty",
+  "sudo": "required",
+  "before_install": "curl -fsSL https://clis.ng.bluemix.net/install/linux | sh && bx login --apikey $BLUEMIX_API_KEY -o $BLUEMIX_ORGANIZATION -s $BLUEMIX_SPACE -a $BLUEMIX_ENDPOINT",
+  "install": "scripts/install.sh",
+  "group": "stable",
+  "os": "linux"
+}

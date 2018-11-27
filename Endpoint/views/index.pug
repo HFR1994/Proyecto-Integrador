@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  form(method='POST' action='/register')
+      .main.container
+        .login
+          .login_title
+            span Registra una Organización
+          .login_fields
+              div.form-group
+                label(for='name') Compañia:
+                input#name.form-control(type='text', placeholder='Compañia' name='company')
+              div.form-group
+                label(for='email') Email:
+                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+              div.form-group
+                label(for='favoriteBook') Responsable:
+                input#favoriteBook.form-control(type='text', placeholder='Responsable' name='responsable')
+              div.form-group
+                label(for='pw') Usuario:
+                input#pw.form-control(type='text' name='user', placeholder="Usuario")
+              div.form-group
+                label(for='pw2') Password:
+                input#pw2.form-control(type='password' name="password" placeholder='Password')
+              div.form-group
+                  label(for='affiliation') Affiliación:
+                  select#affiliation.form-control(name="affiliation")
+                    option(value="org1") Org1
+                    option(value="org1.department1") Org1.department1
+                    option(value="org1.department2") Org1.department2
+                    option(value="org2") Org2
+                    option(value="org2.department1") Org2.department1
+              div.login_fields__submit
+                input(type='submit' value="Registrarse")
+
+
